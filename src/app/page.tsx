@@ -1,5 +1,5 @@
-import { KomHunterDashboard } from "@/components/kom-hunter-dashboard";
+import { KomRadarDashboard } from "@/components/kom-radar-dashboard";
 
 export default function HomePage() {
-  return <KomHunterDashboard />;
+  return <KomRadarDashboard />;
 }

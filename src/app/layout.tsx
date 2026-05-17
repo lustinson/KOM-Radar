@@ -5,8 +5,12 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
-  title: "KOM Hunter",
+  metadataBase: new URL("https://komradar.com"),
+  title: "KOM Radar",
   description: "Analyze nearby Strava segments, estimate KOM power, and compare it against your recent power curve.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

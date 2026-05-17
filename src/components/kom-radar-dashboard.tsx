@@ -24,7 +24,7 @@ const defaultFormState = {
   maxActivities: 20,
 };
 
-export function KomHunterDashboard() {
+export function KomRadarDashboard() {
   const [formState, setFormState] = useState(defaultFormState);
   const [analysis, setAnalysis] = useState<KomAnalysisResponse | null>(null);
   const [coordinates, setCoordinates] = useState<{ lat: number; lon: number } | null>(null);
@@ -168,8 +168,8 @@ export function KomHunterDashboard() {
     <main className="page-shell">
       <div style={{ position: "absolute", top: "2rem", right: "2rem" }}>
         <Image
-          src="/KOM-Hunter-basic-logo.png"
-          alt="KOM Hunter Logo"
+          src="/KOM-Radar-basic-logo.png"
+          alt="KOM Radar Logo"
           width={200}
           height={200}
           priority
@@ -177,7 +177,7 @@ export function KomHunterDashboard() {
       </div>
       <section className="hero panel stack-lg">
         <div className="section-heading">
-          <p className="eyebrow">KOM Hunter</p>
+          <p className="eyebrow">KOM Radar</p>
           <h1>Nearby KOM analysis for riders who train with power</h1>
           <p>
             Use browser geolocation to score nearby Strava segments, estimate the watts needed for the KOM today, and compare that target against your recent best power curve.

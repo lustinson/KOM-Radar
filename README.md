@@ -1,12 +1,12 @@
-# KOM Hunter
+# KOM Radar
 
-https://kom-hunter.vercel.app/
+https://komradar.com/
 
-`KOM Hunter` is a full-stack web application that leverages real-time performance analytics to identify personal competitive opportunities on Strava. The platform analyzes nearby segments to predict achievability based on athlete power metrics.
+`KOM Radar` is a full-stack web application that leverages real-time performance analytics to identify personal competitive opportunities on Strava. The platform analyzes nearby segments to predict achievability based on athlete power metrics.
 
 ### About Strava & KOMs
 
-Strava is a leading platform for cyclists and runners to track activities and compete on leaderboards. A **KOM** (King of the Mountain) is the fastest time on a given segment, a coveted achievement in the cycling community. KOM Hunter helps riders discover which nearby KOMs they're likely to achieve based on their recent performance data.
+Strava is a leading platform for cyclists and runners to track activities and compete on leaderboards. A **KOM** (King of the Mountain) is the fastest time on a given segment, a coveted achievement in the cycling community. KOM Radar helps riders discover which nearby KOMs they're likely to achieve based on their recent performance data.
 
 ## Architecture
 

@@ -35,7 +35,7 @@ function buildExplorePath(bounds: [number, number, number, number]) {
   return `/segments/explore?${params.toString()}`;
 }
 
-export async function getNearbySegments(context: StravaRequestContext, lat: number, lon: number, radiusDegrees = 0.01) {
+export async function getNearbySegments(context: StravaRequestContext, lat: number, lon: number, radiusDegrees = 0.2) {
   const quadrants: Array<[number, number, number, number]> = [
     [lat - radiusDegrees, lon - radiusDegrees, lat, lon],
     [lat - radiusDegrees, lon, lat, lon + radiusDegrees],

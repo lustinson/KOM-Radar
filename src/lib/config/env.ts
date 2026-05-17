@@ -8,7 +8,7 @@ const serverEnvSchema = z.object({
   STRAVA_REDIRECT_URI: z.string().url(),
   SESSION_SECRET: z.string().min(32),
   OPENWEATHER_API_KEY: z.string().min(1),
-  NEXT_PUBLIC_APP_NAME: z.string().min(1).default("KOM Hunter"),
+  NEXT_PUBLIC_APP_NAME: z.string().min(1).default("KOM Radar"),
 });
 
 let cachedEnv: z.infer<typeof serverEnvSchema> | null = null;

@@ -9,9 +9,9 @@ import { getServerEnv } from "@/lib/config/env";
 import { refreshStravaSession } from "@/lib/strava/oauth";
 import type { ClientSession, StravaSession } from "@/lib/types/auth";
 
-const SESSION_COOKIE_NAME = "kom_hunter_session";
-const OAUTH_STATE_COOKIE_NAME = "kom_hunter_oauth_state";
-const POST_AUTH_REDIRECT_COOKIE_NAME = "kom_hunter_post_auth_redirect";
+const SESSION_COOKIE_NAME = "kom_radar_session";
+const OAUTH_STATE_COOKIE_NAME = "kom_radar_oauth_state";
+const POST_AUTH_REDIRECT_COOKIE_NAME = "kom_radar_post_auth_redirect";
 const SESSION_TTL_SECONDS = 60 * 60 * 24 * 30;
 const REFRESH_LEEWAY_SECONDS = 5 * 60;
 
@@ -28,6 +28,10 @@ function getCookieBaseOptions(maxAge: number) {
     path: "/",
     maxAge,
   };
+}
+
+function clearCookie(cookieStore: Pick<ResponseCookies, "set">, cookieName: string) {
+  cookieStore.set(cookieName, "", getCookieBaseOptions(0));
 }
 
 async function encryptSession(session: StravaSession) {
@@ -63,7 +67,7 @@ export async function writeSessionCookie(cookieStore: Pick<ResponseCookies, "set
 }
 
 export function clearSessionCookie(cookieStore: Pick<ResponseCookies, "set">) {
-  cookieStore.set(SESSION_COOKIE_NAME, "", getCookieBaseOptions(0));
+  clearCookie(cookieStore, SESSION_COOKIE_NAME);
 }
 
 export function writeOauthStateCookie(cookieStore: Pick<ResponseCookies, "set">, state: string) {
@@ -75,7 +79,7 @@ export function readOauthStateCookie(cookieStore: Pick<RequestCookies, "get">) {
 }
 
 export function clearOauthStateCookie(cookieStore: Pick<ResponseCookies, "set">) {
-  cookieStore.set(OAUTH_STATE_COOKIE_NAME, "", getCookieBaseOptions(0));
+  clearCookie(cookieStore, OAUTH_STATE_COOKIE_NAME);
 }
 
 export function writePostAuthRedirectCookie(cookieStore: Pick<ResponseCookies, "set">, redirectTo: string) {
@@ -87,7 +91,7 @@ export function readPostAuthRedirectCookie(cookieStore: Pick<RequestCookies, "ge
 }
 
 export function clearPostAuthRedirectCookie(cookieStore: Pick<ResponseCookies, "set">) {
-  cookieStore.set(POST_AUTH_REDIRECT_COOKIE_NAME, "", getCookieBaseOptions(0));
+  clearCookie(cookieStore, POST_AUTH_REDIRECT_COOKIE_NAME);
 }
 
 export function toClientSession(session: StravaSession | null): ClientSession {

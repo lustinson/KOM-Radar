@@ -220,8 +220,14 @@ export function KomRadarDashboard() {
                   Disconnect
                 </button>
               ) : (
-                <a className="button primary button-link" href="/api/auth/strava/login?redirectTo=/">
-                  Connect Strava
+                <a className="strava-connect-link" href="/api/auth/strava/login?redirectTo=/" aria-label="Connect with Strava">
+                  <Image
+                    src="/strava-connect-button.svg"
+                    alt="Connect with Strava"
+                    width={277}
+                    height={56}
+                    priority
+                  />
                 </a>
               )}
             </div>
@@ -324,6 +330,17 @@ export function KomRadarDashboard() {
 
         <ResultsPanel analysis={analysis} loading={loading} />
       </div>
+
+      <footer className="brand-footer">
+        <a href="https://www.strava.com" target="_blank" rel="noreferrer" aria-label="Powered by Strava">
+          <Image
+            src="/pwrdBy-strava-button.svg"
+            alt="Powered by Strava"
+            width={365}
+            height={37}
+          />
+        </a>
+      </footer>
     </main>
   );
 }

@@ -10,6 +10,7 @@
   --text-muted: #94a3b8;
   --accent: #38bdf8;
   --accent-strong: #0ea5e9;
+  --strava-orange: #FC5200;
   --success: #22c55e;
   --warning: #f59e0b;
   --danger: #f97316;
@@ -41,7 +42,6 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
 button,
 input,
 select {
@@ -180,6 +180,34 @@ select {
   justify-content: flex-start;
 }
 
+.strava-text-link {
+  color: var(--strava-orange);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.strava-text-link:hover {
+  opacity: 0.88;
+}
+
+.brand-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.brand-footer a {
+  display: inline-flex;
+  line-height: 0;
+}
+
+.brand-footer img {
+  display: block;
+  width: min(365px, 100%);
+  height: auto;
+}
+
 .summary-card {
   display: grid;
   gap: 8px;
@@ -241,6 +269,19 @@ button:focus {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.strava-connect-link {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.strava-connect-link img {
+  display: block;
+  width: auto;
+  height: 56px;
+  max-width: 100%;
 }
 
 .button:hover:not(:disabled) {
@@ -318,5 +359,9 @@ button:focus {
   .location-row {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .brand-footer {
+    margin-top: 32px;
   }
 }

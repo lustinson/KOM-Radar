@@ -119,7 +119,7 @@ export function ResultsPanel({ analysis, loading }: ResultsPanelProps) {
             </div>
             <div className="result-card-actions">
               <a
-                className="button secondary button-link"
+                className="strava-text-link"
                 href={getStravaSegmentUrl(result.segmentId)}
                 target="_blank"
                 rel="noreferrer"

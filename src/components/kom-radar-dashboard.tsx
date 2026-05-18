@@ -336,8 +336,8 @@ export function KomRadarDashboard() {
           <Image
             src="/pwrdBy-strava-button.svg"
             alt="Powered by Strava"
-            width={365}
-            height={37}
+            width={220}
+            height={22}
           />
         </a>
       </footer>

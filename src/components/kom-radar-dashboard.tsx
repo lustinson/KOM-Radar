@@ -175,7 +175,7 @@ export function KomRadarDashboard() {
           priority
         />
       </div>
-      <section className="hero panel stack-lg">
+      <section className="hero panel stack-lg" style={{ marginBottom: "2rem" }}>
         <div className="section-heading">
           <p className="eyebrow">KOM Radar</p>
           <h1>Nearby KOM analysis for riders who train with power</h1>

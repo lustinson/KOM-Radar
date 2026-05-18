@@ -177,21 +177,10 @@ export function KomRadarDashboard() {
       </div>
       <section className="hero panel stack-lg" style={{ marginBottom: "2rem" }}>
         <div className="section-heading">
-          <p className="eyebrow">KOM Radar</p>
-          <h1>Nearby KOM analysis for riders who train with power</h1>
+          <h1>KOM Radar</h1>
           <p>
             Use browser geolocation to score nearby Strava segments, estimate the watts needed for the KOM today, and compare that target against your recent best power curve.
           </p>
-        </div>
-        <div className="hero-grid">
-          <article className="callout subtle stack-sm">
-            <strong>V1 focus</strong>
-            <p>Analyze nearby KOM targets and show whether your recent power profile suggests they are realistic right now.</p>
-          </article>
-          <article className="callout subtle stack-sm">
-            <strong>Future-ready seam</strong>
-            <p>Power-curve data is recomputed from Strava streams today, with a clear path to account sync and background updates later.</p>
-          </article>
         </div>
       </section>
 

@@ -166,7 +166,7 @@ export function KomRadarDashboard() {
 
   return (
     <main className="page-shell">
-      <div style={{ position: "absolute", top: "2rem", right: "2rem" }}>
+      <div style={{ position: "absolute", top: "2rem", left: "2rem" }}>
         <Image
           src="/KOM-Radar-basic-logo.png"
           alt="KOM Radar Logo"
